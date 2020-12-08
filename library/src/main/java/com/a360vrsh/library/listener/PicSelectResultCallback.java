@@ -1,0 +1,50 @@
+package com.a360vrsh.library.listener;
+
+import android.util.Log;
+
+import com.a360vrsh.library.adapter.GridImageAdapter;
+import com.luck.picture.lib.entity.LocalMedia;
+import com.luck.picture.lib.listener.OnResultCallbackListener;
+
+import java.lang.ref.WeakReference;
+import java.util.List;
+
+/**
+ * 图片选择返回结果回调
+ */
+public class PicSelectResultCallback implements OnResultCallbackListener<LocalMedia> {
+    private static final String TAG = "MyResultCallback";
+    private WeakReference<GridImageAdapter> mAdapterWeakReference;
+
+    public PicSelectResultCallback(GridImageAdapter adapter) {
+        super();
+        this.mAdapterWeakReference = new WeakReference<>(adapter);
+    }
+
+    @Override
+    public void onResult(List<LocalMedia> result) {
+        for (LocalMedia media : result) {
+            Log.i(TAG, "是否压缩:" + media.isCompressed());
+            Log.i(TAG, "压缩:" + media.getCompressPath());
+            Log.i(TAG, "原图uri:" + media.getPath());
+            Log.i(TAG, "原图path::" + media.getRealPath());
+            Log.i(TAG, "是否裁剪:" + media.isCut());
+            Log.i(TAG, "裁剪:" + media.getCutPath());
+            Log.i(TAG, "是否开启原图:" + media.isOriginal());
+            Log.i(TAG, "原图路径:" + media.getOriginalPath());
+            Log.i(TAG, "Android Q 特有Path:" + media.getAndroidQToPath());
+            Log.i(TAG, "宽高: " + media.getWidth() + "x" + media.getHeight());
+            Log.i(TAG, "Size: " + media.getSize());
+            // TODO 可以通过PictureSelectorExternalUtils.getExifInterface();方法获取一些额外的资源信息，如旋转角度、经纬度等信息
+        }
+        if (mAdapterWeakReference.get() != null) {
+            mAdapterWeakReference.get().setList(result);
+            mAdapterWeakReference.get().notifyDataSetChanged();
+        }
+    }
+
+    @Override
+    public void onCancel() {
+        Log.i(TAG, "PictureSelector Cancel");
+    }
+}

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_gray"
+    android:orientation="vertical"
+    tools:context=".activity.user.DiyShareActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:src="@mipmap/ic_phone" />
+
+        <TextView
+            style="@style/library_text_999"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:text="设置自定义分享后，分享至第三方平台的分享内容将更改为您编辑的内容" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/library_text_title"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:text="分享标题" />
+
+        <EditText
+            android:id="@+id/edt_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:background="@null"
+            android:hint="请输入分享标题，建议35个字以内"
+            android:textColor="@color/library_text_666"
+            android:textColorHint="@color/text_hint"
+            android:textSize="@dimen/sp_15" />
+
+
+        <View style="@style/library_line_horizontal" />
+
+
+        <TextView
+            style="@style/library_text_title"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:text="分享内容" />
+
+        <EditText
+            android:id="@+id/edt_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:background="@null"
+            android:hint="请输入分享内容，建议60个字以内"
+            android:textColor="@color/library_text_666"
+            android:textColorHint="@color/text_hint"
+            android:textSize="@dimen/sp_15" />
+
+        <View style="@style/library_line_horizontal" />
+
+        <TextView
+            style="@style/library_text_title"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:text="分享图片" />
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_add_pic2" />
+
+
+        <TextView
+            style="@style/library_text_999"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:text=" 建议上传200*200的图片" />
+    </LinearLayout>
+</LinearLayout>

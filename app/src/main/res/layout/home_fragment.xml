@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.HomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/title_group"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:background="@color/library_white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_city"
+            style="@style/library_text_333"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="4"
+            android:text="城市"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/tv_store_name"
+            style="@style/library_text_666"
+            android:layout_centerInParent="true"
+            android:text="店铺名称"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp_16" />
+
+        <LinearLayout
+            android:id="@+id/ll_store_status"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iv_store_status"
+                android:layout_width="@dimen/dp_15"
+                android:layout_height="@dimen/dp_15"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:src="@mipmap/ic_status_open" />
+
+            <TextView
+                android:id="@+id/tv_store_status"
+                style="@style/library_text_666"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="营业中"
+                android:textSize="@dimen/sp_15" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.jude.rollviewpager.RollPagerView
+                    android:layout_height="150dp"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:id="@+id/roll_banner"
+                    android:layout_width="match_parent"
+
+                    app:rollviewpager_play_delay="5000" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_30"
+                    android:background="@color/library_white"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="vertical">
+
+                    <com.noober.background.view.BLLinearLayout
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:orientation="horizontal"
+                        app:bl_corners_radius="2.5dp"
+                        android:layout_width="match_parent"
+                        app:bl_solid_color="#1f12b7f5">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_15"
+                            android:layout_height="@dimen/dp_15"
+                            android:layout_marginStart="@dimen/dp_15"
+                            android:src="@mipmap/ic_notice" />
+
+                        <com.a360vrsh.library.widget.UPMarqueeView
+                            android:id="@+id/marqueeView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/dp_25" />
+                    </com.noober.background.view.BLLinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:gravity="center_vertical">
+
+                    <View
+                        style="@style/library_line_vertical"
+                        android:layout_width="@dimen/dp_4"
+                        android:layout_height="@dimen/dp_15"
+                        android:layout_marginEnd="7.5dp"
+                        android:background="@color/color_FC5B57" />
+
+                    <TextView
+                        style="@style/library_text_title"
+                        android:layout_width="0dp"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:text="常用功能" />
+
+                    <TextView
+                        style="@style/library_text_666"
+                        android:drawableEnd="@mipmap/icon_black_arrow_right"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="编辑"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_function"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_height="@dimen/dp_10"
+                    style="@style/library_line_horizontal"
+                    android:background="@color/base_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:gravity="center_vertical">
+
+                    <View
+                        style="@style/library_line_vertical"
+                        android:layout_width="@dimen/dp_4"
+                        android:layout_height="@dimen/dp_15"
+                        android:layout_marginEnd="7.5dp"
+                        android:background="@color/color_9A8DFB" />
+
+                    <TextView
+                        style="@style/library_text_title"
+                        android:layout_width="0dp"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:text="推荐资讯" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/tv_more_article"
+                        style="@style/library_text_666"
+                        android:drawableEnd="@mipmap/icon_black_arrow_right"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="更多" />
+                </LinearLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_article"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    tools:listitem="@layout/item_article_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>

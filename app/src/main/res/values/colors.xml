@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#12B7F5</color>
+    <color name="colorPrimaryDark">#0391C8</color>
+    <color name="colorAccent">#12B7F5</color>
+    <!-- 主题颜色-->
+    <color name="mainColor">#12B7F5</color>
+    <!-- 主题颜色-深色-->
+    <color name="mainColorDark">#03A7E6</color>
+    <!-- 主页面背景色-灰色-->
+    <color name="base_gray">#F8F8F8</color>
+    <!-- 不可点击-灰色-->
+    <color name="unable_gray">#EBEBEB</color>
+    <!-- text hint-->
+    <color name="text_hint">#D2D2D2</color>
+    <color name="orange">#FD7E56</color>
+    <color name="text_price">#FF363B</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_light">#FFFFFE</color>
+    <color name="color_FC5B57">#FC5B57</color>
+    <color name="color_FCA957">#FCA957</color>
+    <color name="color_9A8DFB">#9A8DFB</color>
+    <color name="mainColor_7f">#1f12B7F5</color>
+    <color name="F6F7F9">#F6F7F9</color>
+
+</resources>

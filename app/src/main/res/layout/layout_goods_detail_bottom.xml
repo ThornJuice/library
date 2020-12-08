@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_bottom_group"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_50"
+    android:layout_alignParentBottom="true"
+    android:paddingStart="@dimen/dp_30"
+    android:paddingEnd="@dimen/dp_30"
+    android:background="@color/white"
+    android:gravity="center">
+
+    <com.a360vrsh.library.widget.ShapeTextView
+        android:id="@+id/tv_operation"
+        style="@style/shape_text_solid_blue"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:layout_width="0dp"
+        android:textSize="@dimen/sp_16"
+        android:layout_height="@dimen/dp_35"
+        android:layout_weight="1"
+        android:text="下架" />
+
+    <com.a360vrsh.library.widget.ShapeTextView
+        android:id="@+id/tv_delete"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:textSize="@dimen/sp_16"
+        style="@style/shape_text_solid_blue"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_35"
+        android:layout_weight="1"
+        android:text="删除"
+        app:bl_solid_color="#F5473E" />
+</LinearLayout>

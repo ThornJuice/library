@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/library_nested_scrollview"
+    tools:context=".activity.goods.EditGoodsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/base_gray"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/library_text_999"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:gravity="center"
+            android:text="@string/edit_goods_tip" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/dp_15">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/library_white"
+                android:gravity="center_vertical"
+                android:paddingEnd="0dp">
+
+                <View
+                    style="@style/library_line_vertical"
+                    android:layout_width="@dimen/dp_4"
+                    android:layout_height="@dimen/dp_15"
+                    android:layout_marginEnd="7.5dp"
+                    android:background="#FC5B57" />
+
+                <TextView
+                    style="@style/library_text_title"
+                    android:layout_width="@dimen/dp_70"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:text="基本信息"
+                    android:textSize="@dimen/sp_16"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/dp_50">
+
+                <TextView
+                    style="@style/library_text_title"
+                    android:text="商品名称" />
+
+                <TextView
+                    style="@style/library_text_title"
+                    android:layout_marginTop="-3dp"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:gravity="top"
+                    android:text="*"
+                    android:textColor="#FE1212" />
+
+
+                <EditText
+                    android:id="@+id/edt_goods_name"
+                    style="@style/library_edt_base"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:hint="请输入"
+                    android:maxLength="64" />
+            </LinearLayout>
+
+            <View style="@style/library_line_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/dp_50">
+
+                <TextView
+                    style="@style/library_text_title"
+                    android:text="商品编码" />
+
+                <TextView
+                    style="@style/library_text_title"
+                    android:layout_marginTop="-3dp"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:gravity="top"
+                    android:text="*"
+                    android:textColor="#FE1212" />
+
+
+                <EditText
+                    android:id="@+id/edt_goods_num"
+                    style="@style/library_edt_base"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:hint="请输入"
+                    android:inputType="numberDecimal"
+                    android:maxLength="15" />
+            </LinearLayout>
+
+            <View style="@style/library_line_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/library_text_title"
+                    android:text="商品分类" />
+
+                <TextView
+                    style="@style/library_text_title"
+                    android:layout_marginTop="-3dp"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:gravity="top"
+                    android:text="*"
+                    android:textColor="#FE1212" />
+
+                <TextView
+                    android:id="@+id/tv_choose_goods_class"
+                    style="@style/library_text_title"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:layout_weight="1"
+                    android:drawableEnd="@mipmap/icon_black_arrow_right"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:gravity="end"
+                    android:text="请选择" />
+
+            </LinearLayout>
+
+            <View style="@style/library_line_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/dp_50">
+
+                <TextView
+                    style="@style/library_text_title"
+                    android:text="分享描述" />
+
+                <TextView
+                    style="@style/library_text_title"
+                    android:layout_marginTop="-3dp"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:gravity="top"
+                    android:text="*"
+                    android:textColor="#FE1212" />
+
+
+                <EditText
+                    android:id="@+id/edt_share_describe"
+                    style="@style/library_edt_base"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:hint="请输入"
+                    android:maxLength="255" />
+            </LinearLayout>
+
+            <View style="@style/library_line_horizontal" />
+
+            <LinearLayout
+                android:id="@+id/ll_tag_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/dp_50">
+
+                <TextView
+                    style="@style/library_text_title"
+                    android:text="商品标签" />
+
+                <TextView
+                    style="@style/library_text_title"
+                    android:layout_marginTop="-3dp"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:gravity="top"
+                    android:text="*"
+                    android:textColor="#FE1212"
+                    android:visibility="invisible" />
+
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/tagFlowLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:focusable="false"
+                    app:max_select="-1" />
+            </LinearLayout>
+
+            <View style="@style/library_line_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/library_text_title"
+                    android:text="商品图片" />
+
+                <TextView
+                    style="@style/library_text_title"
+                    android:layout_marginTop="-3dp"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:gravity="top"
+                    android:text="*"
+                    android:textColor="#FE1212" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_images"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:overScrollMode="never" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <com.a360vrsh.library.widget.ShapeTextView
+            android:id="@+id/tv_submit"
+            style="@style/shape_text_submit"
+            android:layout_marginTop="@dimen/dp_50"
+            android:layout_marginBottom="@dimen/dp_50"
+            android:text="提交" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,105 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    signingConfigs {
+        release {
+            keyAlias 'sc'
+            keyPassword '123456'
+            storeFile file('./SmartCity.jks')
+            storePassword '123456'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+    compileSdkVersion rootProject.ext.versions.compileSdkVersion
+    buildToolsVersion rootProject.ext.versions.buildToolsVersion
+
+    defaultConfig {
+        applicationId rootProject.ext.versions.applicationId
+        minSdkVersion rootProject.ext.versions.minSdkVersion
+        targetSdkVersion rootProject.ext.versions.targetSdkVersion
+        versionCode rootProject.ext.versions.versionCode
+        versionName rootProject.ext.versions.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        //Arouter路由配置
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable",
+
+                ]
+                includeCompileClasspath = true
+            }
+        }
+        //极光推送
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "086367618cbfe98a669b22fb",
+                JPUSH_CHANNEL: "360vrsh",
+        ]
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            signingConfig signingConfigs.release
+        }
+        release {
+            debuggable false
+            shrinkResources false //去除无用资源
+            zipAlignEnabled true
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+//防止编译的时候oom、GC
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(path: ':library')
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'androidx.preference:preference:1.1.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    //注解处理器 kotlin必须使用kapt代替annotationProcessor
+    kapt rootProject.ext.dependencies["glide_compiler"]
+    kapt rootProject.ext.dependencies["arouter_compiler"]
+
+    implementation 'cn.jiguang.sdk:jpush:3.0.9'
+    implementation 'cn.jiguang.sdk:jcore:1.1.7'
+    implementation files('libs/umeng_shareboard_widget.jar')
+    implementation files('libs/umeng_social_api.jar')
+    implementation files('libs/umeng_social_net.jar')
+    implementation files('libs/umeng_social_shareboard.jar')
+    implementation files('libs/umeng_social_tool.jar')
+    implementation files('libs/open_sdk_r5781.jar')
+    implementation files('libs/SocialSDK_QQ_Simplify.jar')
+    implementation files('libs/SocialSDK_WeChat_Simplify.jar')
+    implementation 'com.dou361.pay:jjdxm-pay:1.0.2'
+    implementation 'com.dou361.dialogui:jjdxm-dialogui:1.0.3'
+    implementation 'com.github.ihsg:PatternLocker:2.5.6'
+    implementation 'com.contrarywind:Android-PickerView:4.1.9'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    implementation 'com.github.angcyo.DslTablayout:TabLayout:1.6.1'
+    implementation 'com.iarcuschin:simpleratingbar:0.1.5'
+    implementation 'com.github.yuzhiqiang1993:zxing:2.2.8'
+
+
+}

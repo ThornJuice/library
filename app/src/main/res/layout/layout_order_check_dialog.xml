@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/library_shape_white_radius"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/library_text_title"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:gravity="center"
+            android:text="请输入核销码"
+            android:textSize="@dimen/sp_16" />
+
+
+        <com.a360vrsh.library.widget.CheckCodeView
+            android:id="@+id/check_code_view"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_30"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_30" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_20"
+            android:gravity="center">
+
+            <com.a360vrsh.library.widget.ShapeTextView
+                android:id="@+id/tv_cancel"
+                style="@style/shape_text_border_gray"
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="@dimen/dp_28"
+                android:layout_marginEnd="@dimen/dp_30"
+                android:text="取消"
+                android:textColor="@color/library_text_333"
+                android:textSize="@dimen/sp_14"
+                android:visibility="visible"
+                app:bl_stroke_color="@color/library_text_999" />
+
+
+            <com.a360vrsh.library.widget.ShapeTextView
+                android:id="@+id/tv_confirm"
+                style="@style/shape_text_solid_blue"
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="@dimen/dp_28"
+                android:text="确定"
+                android:textSize="@dimen/sp_14"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

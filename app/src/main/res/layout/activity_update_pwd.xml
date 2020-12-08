@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_gray"
+    android:orientation="vertical"
+    tools:context=".activity.login.UpdatePassWordActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/library_white"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dp_15"
+        android:paddingEnd="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/library_text_title"
+                android:layout_width="@dimen/dp_70"
+                android:layout_marginEnd="@dimen/dp_15"
+                android:text="原密码" />
+
+            <EditText
+                android:id="@+id/edt_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:textColor="@color/library_text_666"
+                android:textColorHint="@color/text_hint"
+                android:textSize="@dimen/sp_15" />
+        </LinearLayout>
+
+        <View style="@style/library_line_horizontal" />
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/library_white"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dp_15"
+        android:paddingEnd="0dp">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/library_text_title"
+                android:layout_width="@dimen/dp_70"
+                android:layout_marginEnd="@dimen/dp_15"
+                android:text="新密码" />
+
+            <EditText
+                android:id="@+id/edt_new_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="请输入新密码"
+                android:inputType="textPassword"
+                android:textColor="@color/library_text_666"
+                android:textColorHint="@color/text_hint"
+                android:textSize="@dimen/sp_15" />
+        </LinearLayout>
+
+        <View style="@style/library_line_horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/library_white"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dp_15"
+        android:paddingEnd="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/library_text_title"
+                android:layout_width="@dimen/dp_70"
+                android:layout_marginEnd="@dimen/dp_15"
+                android:text="确认密码" />
+
+            <EditText
+                android:id="@+id/edt_repeat_new_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="请再次输入新密码"
+                android:inputType="textPassword"
+                android:textColor="@color/library_text_666"
+                android:textColorHint="@color/text_hint"
+                android:textSize="@dimen/sp_15" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <com.a360vrsh.library.widget.ShapeTextView
+        android:id="@+id/tv_submit"
+        style="@style/shape_text_big"
+        android:layout_marginTop="@dimen/dp_80"
+        android:enabled="false"
+        android:text="确定" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_15"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dp_26"
+        android:paddingEnd="@dimen/dp_26">
+
+        <TextView
+            android:id="@+id/tv_go_forget_pwd"
+            style="@style/library_text_999"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentEnd="true"
+            android:text="忘记密码"
+            android:textSize="@dimen/sp_15" />
+
+    </RelativeLayout>
+</LinearLayout>

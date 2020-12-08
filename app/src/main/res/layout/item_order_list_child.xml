@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:layout_marginTop="@dimen/dp_10"
+    android:orientation="horizontal">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_image"
+        style="@style/image_rounded"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/library_image_placeholder" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_goods_title"
+            style="@style/library_text_333"
+            android:layout_width="match_parent"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text=""
+            android:textSize="@dimen/dp_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_goods_spec"
+            style="@style/library_text_666"
+            android:ellipsize="end"
+            android:text=""
+            android:maxLines="1"
+            android:textSize="@dimen/sp_11" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_goods_num"
+                style="@style/library_text_666"
+                android:text=""
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/sp_11" />
+
+            <TextView
+                android:id="@+id/tv_goods_price"
+                style="@style/library_text_title"
+                android:text="¥0.00"
+                android:textColor="@color/text_price" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

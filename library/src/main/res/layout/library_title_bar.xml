@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/base_title_bar_root"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_40"
+    android:background="@android:color/white">
+
+
+    <LinearLayout
+        android:id="@+id/ll_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="15dp"
+            android:background="@mipmap/library_left_back"
+            android:contentDescription="@null"
+            android:paddingStart="22dp"
+            android:paddingEnd="14dp" />
+
+        <TextView
+            android:id="@+id/tv_back"
+            style="@style/library_text_333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text=""
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/title_text"
+        style="@style/library_text_333"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxEms="12"
+        android:maxLines="1"
+        android:text=""
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:gravity="end|center_vertical"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_right"
+            style="@style/library_text_333"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text=""
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+    <View
+        android:background="#F8F8F8"
+        style="@style/library_line_horizontal"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>

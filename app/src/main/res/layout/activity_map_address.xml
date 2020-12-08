@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView_mv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <com.a360vrsh.library.widget.ShapeTextView
+            android:id="@+id/tv_navigation"
+            style="@style/shape_text_solid_blue"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:text="一键导航"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+    </FrameLayout>
+</LinearLayout>

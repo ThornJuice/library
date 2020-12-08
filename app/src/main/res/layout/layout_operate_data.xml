@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:gravity="center_vertical">
+
+        <View
+            style="@style/library_line_vertical"
+            android:layout_width="@dimen/dp_4"
+            android:layout_height="@dimen/dp_15"
+            android:layout_marginEnd="7.5dp"
+            android:background="@color/color_FCA957" />
+
+        <TextView
+            style="@style/library_text_title"
+            android:layout_width="0dp"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:layout_weight="1"
+            android:text="运营数据" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_30">
+
+        <TextView
+            style="@style/library_text_title"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:text="总访客" />
+
+        <TextView
+            style="@style/library_text_title"
+            android:layout_width="0dp"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:layout_weight="1"
+            android:text="0" />
+
+        <TextView
+            style="@style/library_text_title"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:text="过去一周增加了0访客" />
+    </LinearLayout>
+
+    <View
+        style="@style/library_line_horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/library_text_title"
+                android:text="0" />
+
+            <TextView
+                style="@style/library_text_title"
+                android:text="未处理订单数" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/library_text_title"
+                android:text="0" />
+
+            <TextView
+                style="@style/library_text_title"
+                android:text="本月营业额" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

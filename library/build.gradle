@@ -1,0 +1,120 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+android {
+    compileSdkVersion rootProject.ext.versions.compileSdkVersion
+    buildToolsVersion rootProject.ext.versions.buildToolsVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.versions.minSdkVersion
+        targetSdkVersion rootProject.ext.versions.targetSdkVersion
+        versionCode rootProject.ext.versions.versionCode
+        versionName rootProject.ext.versions.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        //开启MultiDex分包方法
+        multiDexEnabled true
+
+        //Arouter路由配置
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable",
+                             rxhttp_okhttp      : '3.12.1',
+                             rxhttp_package     : 'rxhttp',  //设置RxHttp相关类的包名，多module依赖时，需要配置不同的包名
+                             rxhttp_rxjava      : 'rxjava3'     //可传入rxjava2、rxjava3
+                ]
+                includeCompileClasspath = true
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    //防止编译的时候oom、GC
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    // 在项目中的libs中的所有的.jar结尾的文件，都是依赖
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    api 'androidx.core:core-ktx:1.1.0'
+    api 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    api 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0'
+    api rootProject.ext.dependencies["appcompat"]
+    api rootProject.ext.dependencies["constraintlayout"]
+    api rootProject.ext.dependencies["junit"]
+    api rootProject.ext.dependencies["runner"]
+    api rootProject.ext.dependencies["espresso_core"]
+    api rootProject.ext.dependencies["support_v4"]
+
+    //注释处理器
+    api rootProject.ext.dependencies["support_annotations"]
+    //MultiDex分包方法
+    api rootProject.ext.dependencies["multidex"]
+    //Material design
+    api rootProject.ext.dependencies["design"]
+    //butterknife
+    api rootProject.ext.dependencies["butterknife"]
+    //eventbus
+    api rootProject.ext.dependencies["eventbus"]
+    //Arouter路由
+    api rootProject.ext.dependencies["arouter_api"]
+    //rxhttp
+    api rootProject.ext.dependencies["rxhttp"]
+    api rootProject.ext.dependencies["okhttp"]
+    //rxjava3
+    api rootProject.ext.dependencies["rxJava3"]
+    api rootProject.ext.dependencies["rxAndroid"]
+    api rootProject.ext.dependencies["rxLife"]
+    //BaseRecyclerViewAdapterHelper
+    api rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
+    //工具类
+    api rootProject.ext.dependencies["utilcode"]
+    //glide
+    api rootProject.ext.dependencies["glide"]
+    //状态栏
+    api rootProject.ext.dependencies["immersionbar"]
+    api rootProject.ext.dependencies["immersionbar_components"]
+    api rootProject.ext.dependencies["cancelDialog"]
+    api rootProject.ext.dependencies["gif_drawable"]
+    //状态管理
+    api rootProject.ext.dependencies["stateLib"]
+    //权限
+    api rootProject.ext.dependencies["easypermissions"]
+    //shape
+    api rootProject.ext.dependencies["backgroundLibrary"]
+    //mmkv
+    api 'com.tencent:mmkv-static:1.2.2'
+    //标签布局
+    api 'com.hyman:flowlayout-lib:1.1.2'
+
+    //相册图片选择
+    api 'com.github.LuckSiege.PictureSelector:picture_library:v2.5.9'
+    //SmartRefreshLayout
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-7'
+    api 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4-7'
+    //圆角图片
+    api 'com.makeramen:roundedimageview:2.3.0'
+    //轮播图
+    api 'com.jude:rollviewpager:1.4.6'
+
+
+    kapt rootProject.ext.dependencies["arouter_compiler"]
+    kapt rootProject.ext.dependencies["glide_compiler"]
+    kapt rootProject.ext.dependencies["rxhttp_compiler"]
+
+}

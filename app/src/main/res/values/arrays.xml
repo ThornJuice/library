@@ -1,0 +1,66 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+    <string-array name="home_function">
+        <item>扫码</item>
+        <item>我的全景</item>
+        <item>店铺模板</item>
+        <item>我的商品</item>
+    </string-array>
+    <drawable name="home_function_icon">
+        <item>@mipmap/ic_qrcode</item>
+        <item>@mipmap/ic_my_pano</item>
+        <item>@mipmap/ic_store_template</item>
+        <item>@mipmap/ic_my_goods</item>
+    </drawable>
+
+    <string-array name="store_function">
+        <item>店铺设置</item>
+        <item>基本信息</item>
+        <item>店铺模板</item>
+        <item>账户安全</item>
+        <item>自定义分享</item>
+        <item>我的全景</item>
+        <item>我的商品</item>
+    </string-array>
+    <integer-array name="store_function_icon">
+        <item>@mipmap/ic_qrcode</item>
+        <item>@mipmap/ic_my_pano</item>
+        <item>@mipmap/ic_store_template</item>
+        <item>@mipmap/ic_my_goods</item>
+        <item>@mipmap/ic_qrcode</item>
+        <item>@mipmap/ic_my_pano</item>
+        <item>@mipmap/ic_store_template</item>
+    </integer-array>
+
+
+    <string-array name="other_function">
+        <item>我的收款码</item>
+        <item>关于我们</item>
+        <item>退出登录</item>
+    </string-array>
+    <string-array name="other_function_icon">
+        <item>@mipmap/ic_qrcode</item>
+        <item>@mipmap/ic_my_pano</item>
+    </string-array>
+    <string-array name="store_template_name">
+        <item>模板一（平台默认模板）</item>
+        <item>模板二</item>
+        <item>模板三</item>
+        <item>模板四</item>
+    </string-array>
+    <string-array name="store_template_explain">
+        <item>不支持自定义菜单设置</item>
+        <item>支持自定义菜单设置</item>
+        <item>支持自定义菜单设置</item>
+        <item>支持自定义菜单设置</item>
+    </string-array>
+</resources>

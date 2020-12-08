@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.a360vrsh.library.widget.ShapeTextView
+        android:id="@+id/tv_type"
+        style="@style/shape_text_border_blue"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:text="成人票"
+        android:textSize="@dimen/sp_12"
+        android:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_child"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

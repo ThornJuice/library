@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">全景智慧城市-商家版</string>
+    <string name="navigation_home">首页</string>
+    <string name="navigation_order">订单</string>
+    <string name="navigation_discover">发现</string>
+    <string name="navigation_marketing">营销</string>
+    <string name="navigation_store">店铺</string>
+    <string name="title_activity_register_base_shop_info">RegisterBaseShopInfoActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="edit_goods_tip">商家版app只能编辑及基本信息，体验更多功能请前往PC端</string>
+    <string name="edit_goods_class_tip">温馨提示：长按可拖动排序</string>
+    <string name="empty_pano_tip1">您还没有创建全景，请登录PC端</string>
+    <string name="empty_pano_tip2">(https://sjm.360vrsh.com)，进行创建全景项目</string>
+    <string name="font_family_medium">sans-serif-medium</string>
+</resources>

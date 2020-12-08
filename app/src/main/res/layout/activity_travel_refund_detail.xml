@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.order.TravelRefundDetailActivity">
+
+    <androidx.core.widget.NestedScrollView
+        style="@style/library_nested_scrollview"
+        android:layout_above="@id/ll_bottom_group">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/base_gray"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_80"
+                android:background="@color/mainColor"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_15"
+                android:paddingEnd="0dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_marginEnd="7.5dp"
+                    android:src="@mipmap/ic_order_status" />
+
+                <TextView
+                    android:id="@+id/tv_status_title"
+                    style="@style/library_text_title"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:layout_weight="1"
+                    android:text="退款状态"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_18"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:gravity="center_vertical|end"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/library_text_title"
+                            android:layout_width="@dimen/dp_15"
+                            android:fontFamily="@string/font_family_medium"
+                            android:text="¥"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_18" />
+
+                        <TextView
+                            android:id="@+id/tv_refund_money"
+                            style="@style/library_text_title"
+                            android:fontFamily="@string/font_family_medium"
+                            android:text="0.00"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_30" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_price_info"
+                        style="@style/library_text_title"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:drawableEnd="@mipmap/icon_white_arrow_right"
+                        android:drawablePadding="@dimen/dp_5"
+                        android:text="价格明细"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_10" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:background="@color/library_white"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_15"
+                android:paddingEnd="0dp">
+
+                <View
+                    style="@style/library_line_vertical"
+                    android:layout_width="@dimen/dp_4"
+                    android:layout_height="@dimen/dp_15"
+                    android:layout_marginEnd="7.5dp"
+                    android:background="#FC5B57" />
+
+                <TextView
+                    style="@style/library_text_title"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:text="订单信息"
+                    android:textSize="@dimen/sp_16"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/dp_15"
+                android:paddingEnd="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_10">
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/iv_image"
+                    style="@style/image_rounded"
+                    android:layout_width="@dimen/dp_90"
+                    android:layout_height="@dimen/dp_90"
+                    android:src="@drawable/library_image_placeholder" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        style="@style/library_text_333"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textSize="@dimen/dp_16"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_type"
+                        style="@style/library_text_666"
+                        android:layout_marginTop="@dimen/dp_3"
+                        android:fontFamily="@string/font_family_medium"
+                        android:text=""
+                        android:textSize="@dimen/sp_11" />
+
+                    <TextView
+                        android:id="@+id/tv_use_date"
+                        style="@style/library_text_666"
+                        android:fontFamily="@string/font_family_medium"
+                        android:text=""
+                        android:textSize="@dimen/sp_11" />
+
+                    <TextView
+                        android:id="@+id/tv_num"
+                        style="@style/library_text_666"
+                        android:fontFamily="@string/font_family_medium"
+                        android:text=""
+                        android:textSize="@dimen/sp_11" />
+
+                    <TextView
+                        android:id="@+id/tv_pay_money"
+                        style="@style/library_text_title"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:fontFamily="@string/font_family_medium"
+                        android:text="¥0.00"
+                        android:textColor="@color/text_price" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/library_white"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_15"
+                android:paddingEnd="0dp">
+
+                <View
+                    style="@style/library_line_vertical"
+                    android:layout_width="@dimen/dp_4"
+                    android:layout_height="@dimen/dp_15"
+                    android:layout_marginEnd="7.5dp"
+                    android:background="@color/mainColor" />
+
+                <TextView
+                    style="@style/library_text_title"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:text="客户信息"
+                    android:textSize="@dimen/sp_16"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/library_text_999"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:text="默认为接受短信手机号" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tourist_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:layout_marginBottom="@dimen/dp_10">
+
+                    <TextView
+                        style="@style/library_text_title"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="wrap_content"
+                        android:text="联系人" />
+
+                    <TextView
+                        android:id="@+id/tv_contact_name"
+                        style="@style/library_text_666"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="@dimen/sp_15" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:layout_marginBottom="@dimen/dp_10">
+
+                    <TextView
+                        style="@style/library_text_title"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="wrap_content"
+                        android:text="手机号码" />
+
+                    <TextView
+                        android:id="@+id/tv_contact_phone"
+                        style="@style/library_text_666"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="@dimen/sp_15" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_ticket_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/library_white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="@color/library_white"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/dp_15"
+                    android:paddingEnd="0dp">
+
+                    <View
+                        style="@style/library_line_vertical"
+                        android:layout_width="@dimen/dp_4"
+                        android:layout_height="@dimen/dp_15"
+                        android:layout_marginEnd="7.5dp"
+                        android:background="@color/color_FCA957" />
+
+                    <TextView
+                        style="@style/library_text_title"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:text="退款信息"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:background="@color/library_white">
+
+                    <TextView
+                        style="@style/library_text_title"
+                        android:layout_height="match_parent"
+                        android:minWidth="@dimen/dp_80"
+                        android:text="退款编号" />
+
+                    <TextView
+                        android:id="@+id/tv_refund_sn"
+                        style="@style/library_text_666"
+                        android:text=""
+                        android:textSize="@dimen/sp_15" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:background="@color/library_white">
+
+                    <TextView
+                        style="@style/library_text_title"
+                        android:minWidth="@dimen/dp_80"
+                        android:text="创建时间" />
+
+                    <TextView
+                        android:id="@+id/tv_create_date"
+                        style="@style/library_text_666"
+                        android:text=""
+                        android:textSize="@dimen/sp_15" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_refund_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:background="@color/library_white">
+
+                    <TextView
+                        style="@style/library_text_title"
+                        android:minWidth="@dimen/dp_80"
+                        android:text="退款时间" />
+
+                    <TextView
+                        android:id="@+id/tv_refund_date"
+                        style="@style/library_text_666"
+                        android:text=""
+                        android:textSize="@dimen/sp_15" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:background="@color/library_white">
+
+                    <TextView
+                        style="@style/library_text_title"
+                        android:minWidth="@dimen/dp_80"
+                        android:text="备注" />
+
+                    <TextView
+                        android:id="@+id/tv_remark"
+                        style="@style/library_text_666"
+                        android:text=""
+                        android:textSize="@dimen/sp_15" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/ll_bottom_group"
+        layout="@layout/layout_refund_detail_bottom"
+        android:visibility="visible" />
+</RelativeLayout>

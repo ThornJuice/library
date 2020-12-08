@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.noober.background.view.BLLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    app:bl_solid_color="@color/white"
+    app:bl_stroke_color="#D8D8D8"
+    app:bl_stroke_width="0.5dp">
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/library_text_666"
+        android:layout_width="0dp"
+        android:layout_margin="@dimen/dp_8"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="规格规格规格规格规格规格规格规格" />
+
+    <View
+        style="@style/library_line_vertical"
+        android:background="#D8D8D8" />
+
+    <TextView
+        android:id="@+id/tv_sale_price"
+        style="@style/library_text_666"
+        android:layout_width="0dp"
+        android:layout_margin="@dimen/dp_8"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="销售价" />
+
+    <View
+        style="@style/library_line_vertical"
+        android:background="#D8D8D8" />
+
+    <TextView
+        android:id="@+id/tv_market_price"
+        style="@style/library_text_666"
+        android:layout_width="0dp"
+        android:layout_margin="@dimen/dp_8"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="市场价" />
+
+    <View
+        style="@style/library_line_vertical"
+        android:background="#D8D8D8" />
+
+    <TextView
+        android:id="@+id/tv_price_cost"
+        style="@style/library_text_666"
+        android:layout_width="0dp"
+        android:layout_margin="@dimen/dp_8"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="成本价" />
+</com.noober.background.view.BLLinearLayout>
